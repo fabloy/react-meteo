@@ -1,13 +1,473 @@
-body {
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App{
+  
+ min-height: 110vh;
 }
+#bottomComponentsDesktop{
+  display: none;
+}
+
+ul{
+  list-style: none;
+}
+body {
+  max-width: 1400px;
+  font-family: 'Poppins', sans-serif;
+  background:rgb(241, 241, 241);
+  margin: 0 auto;
+
+}
+
+/* Cities css */
+h2{
+  margin: 0 auto;
+  margin-top: 2rem;
+  color:#01175F;
+  line-height: 42px;
+  font-size: 28px;
+}
+#containerAggiungiCitta{
+width: 80%;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+#containerAggiungiCitta p{
+  color: #01175F;
+  font-family: 'Poppins', sans-serif;
+  font-size:20px; 
+  font-weight:600; 
+  letter-spacing:0; 
+  line-height:30px; 
+  text-align: center;
+}
+
+
+#containerCities{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items:center;
+ margin-top: 20px;
+ height: 80vh;
+}
+.containerCity{
+  height:140px;
+  width:374px;
+  border-radius:25px;
+  margin:10px 0px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sunnyStyle{
+  background: radial-gradient(circle, rgba(83,116,231,1) 0%, rgba(119,185,245,1) 100%);
+  box-shadow:5px 10px 20px rgba(0,0,0,0.17); 
+
+}
+
+.darkBlueStyle{
+  background: radial-gradient(circle, #011354 0%, #5B9FE3 100%);
+  box-shadow:5px 10px 20px rgba(0,0,0,0.17);  
+   
+}
+
+.grayStyle{
+  box-shadow:5px 10px 20px rgba(0,0,0,0.17);  
+  background: radial-gradient(circle, rgba(70,76,100,1) 0%, rgba(153,169,185,1) 100%);
+}
+.city{
+  cursor: pointer;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 1.625rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight:600; 
+  letter-spacing:0; 
+  line-height: 39px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 95%;
+  height: 100%;
+}
+.city >*{
+  width: 30%;
+}
+.city div p{
+  text-align: center;
+}
+.city div:first-child{
+  font-size: 1.6rem;
+}
+.city div:last-child{
+  text-align: center;
+  font-size: 50px;
+  font-weight:600 bold;
+  letter-spacing:0; 
+  line-height:39px;
+}
+.city img{
+  max-width: 80%;
+}
+
+.day-dayN-month{
+  color: #FFFFFF;
+  font-family: Poppins;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing:0; 
+  line-height: 18px;
+}
+
+#menuDown{
+  background-color: white;
+  width: 90%;
+  margin: 0 auto;
+  border-radius:25px;
+  display: flex;
+  height: 4rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  position: fixed;
+  left: 5%;
+  top: 85vh;
+  z-index: 2;
+}
+.itemMenu{
+flex: 20%;
+display: flex;
+align-items: center;
+}
+#firstImgInMenu{
+  max-height: 40%;
+  margin: 0 auto;
+}
+.itemMenu img{
+  max-height: 40%;
+  margin: 0 auto;
+}
+/* fine Cities css */
+
+/* cityDetail css */
+.cityDetailContainer{
+  height: 110vh;
+  width: 100vw;
+  padding-top: 10px;
+}
+
+.cityDetailContainer div >*{
+  margin-bottom: 10px;
+  color: white;
+}
+
+.cityDetailContainer div h3{
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 3rem;
+  text-align: center;
+  
+}
+
+.cityDetailContainer section:first-child{
+  margin-top: 35px;
+}
+
+.topSectionDetail{
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+.topSectionDetail div{
+  width: 45%;
+  text-align: right;
+  
+}
+
+.topSectionDetail #topSectionTemperature{
+  color: #FFFFFF;
+  width: 55%;
+  font-size: 6.875rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 166px;
+  margin-left: 5px;
+}
+
+.middleSectionDetail{
+  width: 80%;
+  margin: 0 auto;
+  
+}
+.middleSectionDetail ul{
+ display: flex;
+}
+.middleSectionDetail #line{
+  width: 85%;
+  background-color: #FFFFFF;
+  height: 3px;
+  position: absolute;
+  left: 15%;
+}
+
+
+.middleSectionDetail ul #nowLi{
+  width: 20%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 38px;
+  margin-right: 10%;
+}
+
+.middleSectionDetail ul .otherLi{
+  width: 20%;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 38px;
+  margin-right: 10%;
+}
+.point{
+  margin: 0 auto;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: #FFFFFF;
+}
+.pointSmall{
+  margin: 0 auto;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: #FFFFFF;
+}
+
+.bottomSectionDetail{
+  margin-top: 5rem;
+}
+
+.bottomSectionDetail ul{
+ display: flex;
+ overflow:scroll;
+}
+
+.cardDay{
+  min-width: 9.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius:#FFFFFF 20px;
+  background-color: rgba ( 255 , 255 , 255 , 0.1 ) ;
+  box-shadow: 5px 10px 20px 0 rgba(0,0,0,0.17);
+
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.cardDay p:nth-of-type(2){
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/*fine cityDetail css */
+
+/* mediaqueries ipad > Dekstop */
+@media screen and (min-width: 768px) {
+
+  #bottomComponentsDesktop{
+    display: block;
+    margin: 0 auto;
+    max-height: 50vh;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+  }
+  #bottomComponentsDesktop > div{
+    flex:30%;
+    border-radius: 25px;
+  }
+
+  #bottomComponentsDesktop .cardDay{
+    min-width: 5rem;
+    flex:40%;
+    color:#FFFFFF
+
+  }
+
+  #bottomComponentsDesktop div .middleSectionDetail ul{
+    display: flex;
+    flex-flow: column wrap;
+   }
+   #bottomComponentsDesktop #lineDesktop{
+     background-color: 10rem;
+     height: 10px;
+     width: 2px;
+   }
+   
+   
+   #bottomComponentsDesktop  #nowLi{
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+   }
+   #bottomComponentsDesktop  #nowLi >*{
+     flex:30%
+   }
+   #bottomComponentsDesktop .middleSectionDetail{
+    border-radius:25px;
+    min-height: 18rem;
+   }
+   
+   #bottomComponentsDesktop .middleSectionDetail ul .otherLi{
+    width: 100%;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+   }
+
+   #bottomComponentsDesktop .middleSectionDetail ul .otherLi>*{
+    flex:50%
+   }
+  
+   #bottomComponentsDesktop #containCard{
+     display: flex;
+   }
+   #thisWeekContainer{
+     display: flex;
+     cursor: pointer;
+     
+   }
+   .thisWeek{
+     border-top-right-radius: 25px;;
+     padding:10px;
+     width: 32%;
+     margin-bottom: 10px;
+    color:#FFFFFF; 
+    font-size:1rem;
+    font-weight:600; 
+    letter-spacing:0; 
+    line-height:42px; 
+    text-align: center;
+   }
+   #bottomComponentsDesktop .thisWeek:last-of-type{
+     background-color: #FFFFFF;;
+     color: #01175F;
+     width: 32%;
+   }
+
+ /* Cities css */
+h2{
+  display: none;
+}
+#containerAggiungiCitta{
+width: 20%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+#containerAggiungiCitta p{
+  color: #01175F;
+  font-family: 'Poppins', sans-serif;
+  font-size:20px; 
+  font-weight:600; 
+  letter-spacing:0; 
+  line-height:30px; 
+  text-align: center;
+}
+
+
+#containerCities{
+ display: flex;
+ flex-direction: row;
+ justify-content:flex-end;
+ margin-top: 0px;
+ margin: 0 auto;
+ height: 50vh;
+ width: 95%;
+ flex-wrap: wrap;
+ align-items:center;
+}
+
+.containerCity:first-child{
+  flex: 60%;
+  margin-right: 15px;
+}
+.containerCity{
+  height:140px;
+  margin:0px 0px;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.city{
+  
+  letter-spacing:0; 
+  line-height: 39px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 95%;
+  height: 100%;
+}
+.city >*{
+  width: 30%;
+}
+.city div p{
+  text-align: center;
+}
+.city div:first-child{
+  font-size: 1.6rem;
+}
+.city div:last-child{
+  text-align: center;
+  font-size: 50px;
+  font-weight:600 bold;
+  letter-spacing:0; 
+  line-height:39px;
+}
+.city img{
+  max-width: 80%;
+}
+
+.day-dayN-month{
+  color: #FFFFFF;
+  font-family: Poppins;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing:0; 
+  line-height: 18px;
+}
+
+#menuDown{
+  display: none;
+}
+/* fine Cities css */
+ }
