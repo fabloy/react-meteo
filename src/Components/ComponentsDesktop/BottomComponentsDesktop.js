@@ -19,7 +19,7 @@ function BottomComponentsDesktop(props){
     <div id="bottomComponentsDesktop">
 
         <div>
-        <p className="thisWeek">Today</p>
+        <p className="today">Today</p>
         <section className={`middleSectionDetail ${backgroundVariants}`}>
 
           <ul>
@@ -60,7 +60,10 @@ function BottomComponentsDesktop(props){
         </div>
 
         <div>
-       <Search></Search>
+        <Search></Search>
+         <div id="localization">
+           <p>localization</p>
+         </div>
         </div>
 
     </div>

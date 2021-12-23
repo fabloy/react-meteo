@@ -363,16 +363,29 @@ align-items: center;
      
    }
    .thisWeek{
-     border-top-right-radius: 25px;;
+     border-top-right-radius: 25px;
      padding:10px;
      width: 32%;
-     margin-bottom: 10px;
     color:#FFFFFF; 
     font-size:1rem;
     font-weight:600; 
     letter-spacing:0; 
     line-height:42px; 
     text-align: center;
+    margin-bottom: 15px;
+   }
+
+   .today{
+    border-top-right-radius: 25px;
+    padding:10px;
+    width: 32%;
+    margin-bottom: 10px;
+    color: #01175F; 
+   font-size:1rem;
+   font-weight:600; 
+   letter-spacing:0; 
+   line-height:42px; 
+   text-align: center;
    }
    #bottomComponentsDesktop .thisWeek:last-of-type{
      background-color: #FFFFFF;;
@@ -380,6 +393,30 @@ align-items: center;
      width: 32%;
    }
 
+   #search{
+     background-color: red;
+     width:100%;
+     height: 50%;
+     display: flex;
+     justify-content: center;
+   }
+   #localization{
+     height: 50%;
+     background-color: green;
+   }
+#search input{
+  min-height: 8.75rem;
+  width: 85%;
+  font-size: 1.75rem;
+}
+#search button{
+  background: radial-gradient(circle, #5374E7 0%, #77B9F5 100%);
+  border-radius: 25px;
+  padding: 10px;
+  border: solid 0px red;
+  display: inline;
+  width: 15%;
+}
  /* Cities css */
 h2{
   display: none;
