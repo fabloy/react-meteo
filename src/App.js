@@ -50,7 +50,7 @@ function App() {
    printDate()
   },[])
 
-  ///
+
 //Array contenente le città che si vogliono cercare, è possibile aggiungerne infinite
   // il DOM si aggiornerà in modo dinamico
   let nomiCitta= ["Trento", "Catania", "Bologna"] 

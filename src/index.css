@@ -10,7 +10,9 @@
 }
 #bottomComponentsDesktop{
   display: none;
+  
 }
+
 
 ul{
   list-style: none;
@@ -20,6 +22,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background:rgb(241, 241, 241);
   margin: 0 auto;
+  padding: 10px;
 
 }
 
@@ -86,7 +89,6 @@ justify-content: center;
   background: radial-gradient(circle, rgba(70,76,100,1) 0%, rgba(153,169,185,1) 100%);
 }
 .city{
-  cursor: pointer;
   text-decoration: none;
   color: #FFFFFF;
   font-size: 1.625rem;
@@ -301,14 +303,17 @@ align-items: center;
   #bottomComponentsDesktop{
     display: block;
     margin: 0 auto;
-    max-height: 50vh;
-    width: 95%;
+    width:100%;
     display: flex;
-    justify-content: center;
+    justify-content:space-between;
   }
   #bottomComponentsDesktop > div{
-    flex:30%;
+    flex:20%;
     border-radius: 25px;
+    margin-left: 5%;
+  }
+  #bottomComponentsDesktop div:first-child{
+    margin-left: 0%;
   }
 
   #bottomComponentsDesktop .cardDay{
@@ -317,7 +322,9 @@ align-items: center;
     color:#FFFFFF
 
   }
-
+  #bottomComponentsDesktop div .middleSectionDetail{
+    width: 100%;
+  }
   #bottomComponentsDesktop div .middleSectionDetail ul{
     display: flex;
     flex-flow: column wrap;
@@ -340,7 +347,7 @@ align-items: center;
    }
    #bottomComponentsDesktop .middleSectionDetail{
     border-radius:25px;
-    min-height: 18rem;
+    min-height: 83%;
    }
    
    #bottomComponentsDesktop .middleSectionDetail ul .otherLi{
@@ -356,6 +363,22 @@ align-items: center;
   
    #bottomComponentsDesktop #containCard{
      display: flex;
+     min-height: 85%;
+     padding-top: 25px;
+     padding-bottom: 25px;
+     border-radius: 25px;
+     border-top-left-radius: 0px;
+   }
+   .cardDay{
+    min-height: 19.063rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    border-radius: 25px;
+    width: 9.25rem;
+   }
+   .cardDay p:last-of-type{
+    font-size:2.625rem
    }
    #thisWeekContainer{
      display: flex;
@@ -364,6 +387,7 @@ align-items: center;
    }
    .thisWeek{
      border-top-right-radius: 25px;
+     border-top-left-radius: 25px;
      padding:10px;
      width: 32%;
     color:#FFFFFF; 
@@ -372,7 +396,6 @@ align-items: center;
     letter-spacing:0; 
     line-height:42px; 
     text-align: center;
-    margin-bottom: 15px;
    }
 
    .today{
@@ -392,22 +415,36 @@ align-items: center;
      color: #01175F;
      width: 32%;
    }
-/**/
+
    #search{
-     background-color: red;
      width:100%;
-     height: 50%;
      display: flex;
-     justify-content: center;
+     justify-content: left;
+     flex-wrap: wrap;
+     
    }
-   #localization{
-     height: 50%;
-     background-color: green;
-   }
+  #search div{
+    height: 50%;
+    width: 100%;
+    display: flex
+  }
+  #search p{
+    height: 50%;
+    width: 100%;
+    text-align: left;
+   
+  }
 #search input{
-  min-height: 8.75rem;
   width: 85%;
+  padding: 15px;
   font-size: 1.75rem;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 25px;
+  border-radius: #B8B8B8 ;
+  background-color: #FFFFFF;
+  box-shadow:28px 5px 10px 20px 0px rgba(0, 0, 0, 0.17);   
+  
+  height: 8.75rem;
 }
 #search button{
   background: radial-gradient(circle, #5374E7 0%, #77B9F5 100%);
@@ -416,6 +453,34 @@ align-items: center;
   border: solid 0px red;
   display: inline;
   width: 15%;
+  cursor: pointer;
+}
+#search button img{
+  max-width: 70%;
+}
+
+#localization{
+  margin-top: 20px;
+}
+
+.localization{
+  color: #01175F; 
+   font-size:1rem;
+   font-weight:600; 
+   letter-spacing:0; 
+   line-height:42px; 
+   text-align: left;
+   padding:10px;
+   padding-top: 0px;
+}
+#localization section{
+  border-radius: 25px;
+  background:radial-gradient(circle, #5374E7 0%, #77B9F5 100%);     
+  box-shadow: 5px 10px 20px 0px rgba(0,0,0,0.17);     
+  height: 8.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
  /* Cities css */
 h2{
@@ -444,10 +509,9 @@ justify-content: center;
  display: flex;
  flex-direction: row;
  justify-content:flex-end;
- margin-top: 0px;
  margin: 0 auto;
  height: 50vh;
- width: 95%;
+ width: 100%;
  flex-wrap: wrap;
  align-items:center;
 }

@@ -3,6 +3,7 @@ import TopSectionDetail from "../otherComponents/TopSectionDetail"
 import NextHours from "../otherComponents/NextHours"
 import Search from "../ComponentsDesktop/Search"
 import CardBottom from "../otherComponents/CardBottom"
+import Localization from "../../Components/ComponentsDesktop/localization"
 
 function BottomComponentsDesktop(props){
 
@@ -46,13 +47,13 @@ function BottomComponentsDesktop(props){
          </section>
         </div>
 
-        <div className={`${backgroundVariants}`}>
-         <div id="thisWeekContainer">
-         <p className="thisWeek">This Week</p>
+        <div >
+         <div id="thisWeekContainer" >
+         <p className={`${backgroundVariants} thisWeek`}>This Week</p>
          <p className="thisWeek">This Month</p>    
          </div>   
          
-         <div id="containCard">
+         <div id="containCard" className={`${backgroundVariants}`}>
          <CardBottom cityName={props.cityName} date={props.date}></CardBottom>
          <CardBottom cityName={props.cityName} date={props.date}></CardBottom>
          <CardBottom cityName={props.cityName} date={props.date}></CardBottom>
@@ -61,9 +62,7 @@ function BottomComponentsDesktop(props){
 
         <div>
         <Search></Search>
-         <div id="localization">
-           <p>localization</p>
-         </div>
+         <Localization></Localization>
         </div>
 
     </div>
